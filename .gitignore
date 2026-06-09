@@ -19,7 +19,7 @@ yarn-debug.log*
 pnpm-debug.log*
 
 # Env files (keep examples)
-.env
+scripts/.env
 .env.*
 !.env.example
 !.env*.example
@@ -30,3 +30,5 @@ pnpm-debug.log*
 .DS_Store
 Thumbs.db
 
+# Raw data
+/scripts/seed-data/raw-inputs/
