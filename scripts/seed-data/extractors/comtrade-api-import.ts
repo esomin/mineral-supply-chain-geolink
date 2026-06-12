@@ -7,9 +7,8 @@ const BASE_URL = 'https://comtradeapi.un.org/data/v1/get/C/A/HS';
 const KOREA_REPORTER_CODE = '410';
 
 const TARGET_MINERALS = {
-    LITHIUM: '282520',
-    // COBALT: '810520',
-    // NICKEL: '750210',
+    LITHIUM_H: '282520', // 수산화/산화 리튬
+    LITHIUM_C: '283691', // 탄산 리튬
 };
 
 type PartnerReference = {
@@ -23,9 +22,15 @@ function loadPartnerDescMap(referencePath: string): Map<number, string> {
 }
 
 async function fetchRawComtradeData(hsCode: string, period: string = '2025'): Promise<any> {
+    // API 호출 전 2초 대기
+    const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+    await sleep(2000);
+
     const params = new URLSearchParams({
         cmdCode: hsCode,
-        reporterCode: KOREA_REPORTER_CODE,
+        //reporterCode: KOREA_REPORTER_CODE,
+        reporterCode:      '410,392', // 한국, 일본
+        partnerCode:       '842,156,152', // 미국, 중국, 칠레
         period,
         flowCode: 'M',
         'subscription-key': COMTRADE_API_KEY,
@@ -78,12 +83,12 @@ async function runPipeline() {
 
         console.log(`[${mineralName}] 전체 레코드: ${rawResult.data.length}건`);
 
-        const rawPath = path.join(outputDir, `raw-comtrade-to-korea-${mineralName.toLowerCase()}-${targetPeriod}.json`);
+        const rawPath = path.join(outputDir, `raw-comtrade-${mineralName.toLowerCase()}-${targetPeriod}.json`);
         fs.writeFileSync(rawPath, JSON.stringify(rawResult, null, 2), 'utf-8');
         console.log(`[File Saved] 원본: ${rawPath}`);
 
         const topPartners = extractTopImportPartnersForKorea(rawResult.data, partnerDescMap, 10);
-        const topPath = path.join(outputDir, `top-exporters-to-korea-${mineralName.toLowerCase()}-${targetPeriod}.json`);
+        const topPath = path.join(outputDir, `top-exporters-${mineralName.toLowerCase()}-${targetPeriod}.json`);
         fs.writeFileSync(topPath, JSON.stringify(topPartners, null, 2), 'utf-8');
 
         console.log(`[File Saved] 한국 수입 Top10: ${topPath}`);
