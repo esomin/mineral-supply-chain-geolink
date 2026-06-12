@@ -6,8 +6,8 @@ const COMTRADE_API_KEY = process.env["COMTRADE_API_KEY"] || '';
 const BASE_URL = 'https://comtradeapi.un.org/data/v1/get/C/A/HS';
 
 const TARGET_MINERALS = {
-    // LITHIUM: '282520', // 수산화/탄산 리튬
-    LITHIUM: '283691', // 산화 리튬 (Lithium oxide)
+    // LITHIUM: '282520', // 수산화/산화 리튬
+    LITHIUM: '283691', // 탄산 리튬
 };
 
 
@@ -93,13 +93,13 @@ async function runPipeline() {
         console.log(`[${mineralName}] 전체 레코드: ${rawResult.data.length}건`);
 
         // 1 원본 전체 백업
-        const rawPath = path.join(outputDir, `raw-comtrade-${mineralName.toLowerCase()}-${targetPeriod}.json`);
+        const rawPath = path.join(outputDir, `raw-comtrade-${mineralName.toLowerCase()}-c-${targetPeriod}.json`);
         fs.writeFileSync(rawPath, JSON.stringify(rawResult, null, 2), 'utf-8');
         console.log(`[File Saved] 원본: ${rawPath}`);
 
         // 2 상위 10개국 추출
         const topExporters = extractTopExporters(rawResult.data, reporterDescMap, 10);
-        const topPath = path.join(outputDir, `top-exporters-${mineralName.toLowerCase()}-${targetPeriod}.json`);
+        const topPath = path.join(outputDir, `top-exporters-${mineralName.toLowerCase()}-c-${targetPeriod}.json`);
 
         fs.writeFileSync(topPath, JSON.stringify(topExporters, null, 2), 'utf-8');
         console.log(`[File Saved] 상위 10개국: ${topPath}`);

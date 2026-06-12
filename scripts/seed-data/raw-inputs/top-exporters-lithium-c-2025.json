@@ -1,0 +1,72 @@
+[
+  {
+    "rank": 1,
+    "reporterCode": 152,
+    "reporterDesc": "Chile",
+    "primaryValue": 1917382187.82,
+    "qty": 219514830
+  },
+  {
+    "rank": 2,
+    "reporterCode": 32,
+    "reporterDesc": "Argentina",
+    "primaryValue": 1299778065.4,
+    "qty": 79622524.64
+  },
+  {
+    "rank": 3,
+    "reporterCode": 276,
+    "reporterDesc": "Germany",
+    "primaryValue": 211775536.64000005,
+    "qty": 0
+  },
+  {
+    "rank": 4,
+    "reporterCode": 360,
+    "reporterDesc": "Indonesia",
+    "primaryValue": 152861444.48,
+    "qty": 8610000
+  },
+  {
+    "rank": 5,
+    "reporterCode": 410,
+    "reporterDesc": "Rep. of Korea",
+    "primaryValue": 115809032,
+    "qty": 12018357.5
+  },
+  {
+    "rank": 6,
+    "reporterCode": 68,
+    "reporterDesc": "Bolivia (Plurinational State of)",
+    "primaryValue": 89109280,
+    "qty": 2588000
+  },
+  {
+    "rank": 7,
+    "reporterCode": 826,
+    "reporterDesc": "United Kingdom",
+    "primaryValue": 40922555.47,
+    "qty": 560
+  },
+  {
+    "rank": 8,
+    "reporterCode": 528,
+    "reporterDesc": "Netherlands",
+    "primaryValue": 32734264.336,
+    "qty": 3301944
+  },
+  {
+    "rank": 9,
+    "reporterCode": 842,
+    "reporterDesc": "USA",
+    "primaryValue": 16569080,
+    "qty": 995075
+  },
+  {
+    "rank": 10,
+    "reporterCode": 56,
+    "reporterDesc": "Belgium",
+    "primaryValue": 10883792.711,
+    "qty": 1206013.48
+  }
+]
