@@ -18,7 +18,7 @@
     "reporterCode": 76,
     "reporterDesc": "Brazil",
     "primaryValue": 231471824,
-    "qty": 669
+    "qty": 161088669
   },
   {
     "rank": 4,
@@ -38,7 +38,7 @@
     "rank": 6,
     "reporterCode": 752,
     "reporterDesc": "Sweden",
-    "primaryValue": 91679729.86400002,
+    "primaryValue": 91679729.86400001,
     "qty": 0
   },
   {
@@ -52,15 +52,15 @@
     "rank": 8,
     "reporterCode": 826,
     "reporterDesc": "United Kingdom",
-    "primaryValue": 28027418.611999992,
-    "qty": 1456
+    "primaryValue": 27596812.389000002,
+    "qty": 1000
   },
   {
     "rank": 9,
     "reporterCode": 757,
     "reporterDesc": "Switzerland",
-    "primaryValue": 6820024.6559999995,
-    "qty": 171329
+    "primaryValue": 6820024.656,
+    "qty": 0
   },
   {
     "rank": 10,

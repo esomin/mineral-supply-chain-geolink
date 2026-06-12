@@ -6,10 +6,10 @@ const COMTRADE_API_KEY = process.env["COMTRADE_API_KEY"] || '';
 const BASE_URL = 'https://comtradeapi.un.org/data/v1/get/C/A/HS';
 
 const TARGET_MINERALS = {
-    LITHIUM: '282520',
-    // COBALT: '810520',
-    // NICKEL: '750210',
+    // LITHIUM: '282520', // 수산화/탄산 리튬
+    LITHIUM: '283691', // 산화 리튬 (Lithium oxide)
 };
+
 
 async function fetchRawComtradeData(hsCode: string, period: string = '2025'): Promise<any> {
     const params = new URLSearchParams({
