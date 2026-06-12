@@ -1,0 +1,44 @@
+[
+  {
+    "rank": 1,
+    "partnerCode": 156,
+    "partnerDesc": "China",
+    "primaryValue": 593505452,
+    "qty": 35968203.049
+  },
+  {
+    "rank": 2,
+    "partnerCode": 152,
+    "partnerDesc": "Chile",
+    "primaryValue": 167201493,
+    "qty": 18417886
+  },
+  {
+    "rank": 3,
+    "partnerCode": 156,
+    "partnerDesc": "China",
+    "primaryValue": 157901440.78,
+    "qty": 11196270
+  },
+  {
+    "rank": 4,
+    "partnerCode": 842,
+    "partnerDesc": "USA",
+    "primaryValue": 116405710.067,
+    "qty": 6773180
+  },
+  {
+    "rank": 5,
+    "partnerCode": 152,
+    "partnerDesc": "Chile",
+    "primaryValue": 51917968.357,
+    "qty": 4390178
+  },
+  {
+    "rank": 6,
+    "partnerCode": 842,
+    "partnerDesc": "USA",
+    "primaryValue": 7907059,
+    "qty": 484729.261
+  }
+]
