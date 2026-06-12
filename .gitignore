@@ -31,4 +31,4 @@ scripts/.env
 Thumbs.db
 
 # Raw data
-/scripts/seed-data/raw-inputs/
+#/scripts/seed-data/raw-inputs/

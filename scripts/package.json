@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "seed": "tsx seed-data/extractors/comtrade-api.ts"
+    "seed": "tsx seed-data/extractors/comtrade-api.ts",
+    "seed:korea": "tsx seed-data/extractors/comtrade-api-to-korea.ts"
   },
   "devDependencies": {
     "@geolink/tsconfig": "workspace:*",
